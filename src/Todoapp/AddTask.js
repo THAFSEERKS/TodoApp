@@ -1,13 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const AddTask = () => {
+const AddTask = ({addTask}) => {
+  const [value, setvalue] = useState("");
+
+  const addItem = () =>{
+    addTask(value);
+    setvalue("");
+  }
   return (
     <>
         <div className='input-container'>
             <input className="input"  placeholder='Add a new Task' type='text' 
-            onChange={(e)=>{console.log(e.target.value)}}>
+            value={value}
+            onChange={(e)=>{setvalue(e.target.value)}}>
             </input>
-            <button className='add-btn' > ADD</button>
+            <button onClick={addItem} className='add-btn' > ADD</button>
         </div>
     </>
   )

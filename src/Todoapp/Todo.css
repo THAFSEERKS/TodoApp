@@ -46,6 +46,7 @@
     cursor: pointer;
     color :black;
     background-color: rgb(237, 237, 60);
+    cursor: pointer;
 }
 
 .list-tasks{
@@ -72,4 +73,6 @@
     color:white;
     background-color: green;
     float: right;
+    cursor: pointer;
+    
 }
